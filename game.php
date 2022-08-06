@@ -2,6 +2,8 @@
     include_once("./functions/colors.php");
 
     $board = json_decode($_COOKIE['board_game']);
+    $score = $_COOKIE['score'];
+    $game_finish = $_COOKIE['game_finish'];
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +39,16 @@
             <?php endforeach; ?>
         </table>
 
-        <input type="submit" value="Enviar">
+        <div class="disable <?php if($game_finish == 1) echo "active"; ?>">
+            <h2 class="disable__title">Game Finish!</h2>
+            <h2><a href="logic.php?start=1" class="start_button">Start New Game!</a></h2>
+        </div>
     </form>
+
+    <div class="score">
+        <h1>Score: <?php echo $score; ?></h1>
+    </div>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

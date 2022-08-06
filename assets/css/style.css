@@ -1,3 +1,64 @@
+body {
+    background: rgba(0,0,0,0.3);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main_title {
+    font-size: 48px;
+    color: purple;
+}
+
+.start_button {
+    color: #fff;
+    padding: 24px 48px;
+    background: purple;
+    border-radius: 50px;
+    border: 4px solid #fff;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+
+table {
+    transform: rotate(180deg);
+    border: 4px solid #000;
+    position: relative;
+    z-index: 9;
+}
+
+.disable {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    color: #fff;
+    display: none;
+}
+
+.disable.active {
+    display: flex;
+}
+
+.disable__title {
+    font-size: 48px;
+}
+
 .ball {
     display: inline-block;
     width: 50px;
@@ -15,7 +76,7 @@ tr:nth-of-type(even) td:nth-of-type(odd),tr:nth-of-type(odd) td:nth-of-type(even
 
 tr:nth-of-type(even) td:nth-of-type(even), tr:nth-of-type(odd) td:nth-of-type(odd)
 {
-    background-color:rgba(0, 0, 0, 0.75);
+    background-color:rgba(0, 0, 0, 0.5);
 }
 
 
@@ -48,11 +109,14 @@ tr:nth-of-type(even) td:nth-of-type(even), tr:nth-of-type(odd) td:nth-of-type(od
     cursor: default;
 }
 
-
 .ball input[type="checkbox"] {
-    /* display: none; */
+    display: none;
 }
 
 .ball__index {
-    /* display: none; */
+    display: none;
+}
+
+.score h1 {
+    text-align: center;
 }
